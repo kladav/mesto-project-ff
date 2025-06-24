@@ -13,7 +13,7 @@ export function closeModal(popup) {
   document.removeEventListener('keydown', escapeHandler);
 }
 
-export function toggleModal(popup) {
+export function setModalCloseListeners(popup) {
   popup.addEventListener('mousedown', (evt) => {
     if (evt.target.classList.contains('popup__close') || evt.target === popup) {
       closeModal(popup);

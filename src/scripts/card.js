@@ -1,5 +1,6 @@
+const cardTemplate = document.querySelector("#card-template").content;
+
 export function addCard(card, deleteCard, likeCard, handleImageClick) {
-  const cardTemplate = document.querySelector("#card-template").content;
   const cardElement = cardTemplate
     .querySelector(".card")
     .cloneNode(true);
