@@ -1,3 +1,3 @@
 # Проектная работа Mesto
 
-https://github.com/kladav/mesto-project-ff
+https://kladav.github.io/mesto-project-ff
