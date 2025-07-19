@@ -42,7 +42,7 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Редактировать профиль</h3>
-          <form class="popup__form" name="edit-profile">
+          <form class="popup__form" name="edit-profile" novalidate>
             <input
               type="text"
               name="name"
@@ -79,7 +79,7 @@
         <div class="popup__content">
           <button type="button" class="popup__close"></button>
           <h3 class="popup__title">Новое место</h3>
-          <form class="popup__form" name="new-place">
+          <form class="popup__form" name="new-place" novalidate>
             <input
               type="text"
               name="place-name"
@@ -121,7 +121,7 @@
       <div class="popup__content">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Обновить аватар</h3>
-        <form class="popup__form" name="avatar-edit">
+        <form class="popup__form" name="avatar-edit" novalidate>
           <input
             type="url"
             name="avatar"
@@ -144,9 +144,9 @@
         <button type="button" class="card__delete-button"></button>
         <div class="card__description">
           <h2 class="card__title"></h2>
-          <div class="card__like"></div>
-          <span class="card__like-counter">0</span>
+          <div class="card__like">
           <button type="button" class="card__like-button"></button>
+          <span class="card__like-counter">0</span>
         </div>
       </li>
     </template>

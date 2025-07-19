@@ -98,11 +98,11 @@ function handleUserFormSubmit (evt) {
   updateUserInfo(nameInput.value, jobInput.value)
     .then((user) => {
       addProfile(user);
+      closeModal(editPopup);
     })
     .catch((err) => console.log(err))
     .finally(() => {
       renderLoading(false);
-      closeModal(editPopup);
     });
 }
 editProfileForm.addEventListener("submit", handleUserFormSubmit);
@@ -123,11 +123,11 @@ function handleCardFormSubmit(evt) {
       const cardElement = addCard(newCard, deleteCard, likeCard, handleImageClick, newCard.owner._id);
       cardContainer.prepend(cardElement);
       newCardForm.reset();
+      closeModal(addPopup);
     })
     .catch((err) => console.log(err))
     .finally(() => {
       renderLoading(false);
-      closeModal(addPopup);
     });
 }
 

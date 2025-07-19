@@ -10,6 +10,7 @@ function hideInputError(formElement, inputElement, validationConfig) {
   inputElement.classList.remove(validationConfig.inputErrorClass);
   errorElement.classList.remove(validationConfig.errorClass);
   errorElement.textContent = '';
+  inputElement.setCustomValidity('');
 }
 
 function isValid(formElement, inputElement, validationConfig) {
@@ -37,11 +38,6 @@ function toggleButtonState(inputList, buttonElement, validationConfig) {
     buttonElement.classList.remove(validationConfig.inactiveButtonClass);
     buttonElement.disabled = false;
   }
-};
-
-const disableSubmitButton = (buttonElement, validationConfig) => {
-  buttonElement.classList.add(validationConfig.inactiveButtonClass);
-  buttonElement.disabled = true;
 };
 
 function setEventListeners(formElement, validationConfig) {
@@ -78,5 +74,5 @@ export function clearValidation(formElement, validationConfig) {
     hideInputError(formElement, inputElement, validationConfig);
   });
   
-  disableSubmitButton(buttonElement, validationConfig);
+  toggleButtonState(inputList, buttonElement, validationConfig);
 }
